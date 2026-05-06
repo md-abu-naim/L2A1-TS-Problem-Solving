@@ -20,9 +20,9 @@ reverseString('typescript')
 type StringOrNumber = string | number
 
 const checkType = (value: StringOrNumber) => {
-    if(typeof value === 'number'){
+    if (typeof value === 'number') {
         return 'Number'
-    }else if(typeof value === 'string'){
+    } else if (typeof value === 'string') {
         return 'String'
     }
 }
@@ -32,13 +32,7 @@ checkType(52)
 
 
 // Problem 4
-type User = {
-    id: number,
-    name: string,
-    age: number
-}
-
-const getProperty =<T, K extends keyof T> (obj: T, key:K) => {
+const getProperty = <T, K extends keyof T>(obj: T, key: K) => {
     const result = obj[key]
     return result
 }
@@ -47,3 +41,17 @@ const user = { id: 1, name: "John Doe", age: 21 };
 getProperty(user, "id");
 
 
+// Problem 5
+interface Book {
+    title: string,
+    author: string,
+    publishedYear: number,
+}
+
+const toggleReadStatus = (book: Book) => {
+    return { ...book, isRead: true }
+}
+
+
+const myBook = { title: "TypeScript Guide", author: "Jane Doe", publishedYear: 2024 };
+toggleReadStatus(myBook);
