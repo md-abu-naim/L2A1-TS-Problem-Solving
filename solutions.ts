@@ -5,3 +5,14 @@ const filterEvenNumbers = (numbers: number[]) => {
 }
 
 filterEvenNumbers([1, 2, 3, 4, 5, 6])
+
+
+// Problem 2
+const reverseString = (str: string) => {
+    const reverse = str.split('').reverse().join('')
+    return reverse
+}
+
+reverseString('typescript')
+
+
