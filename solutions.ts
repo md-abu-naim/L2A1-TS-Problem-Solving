@@ -16,3 +16,16 @@ const reverseString = (str: string) => {
 reverseString('typescript')
 
 
+// Problem 3
+type StringOrNumber = string | number
+
+const checkType = (value: StringOrNumber) => {
+    if(typeof value === 'number'){
+        return 'Number'
+    }else if(typeof value === 'string'){
+        return 'String'
+    }
+}
+
+checkType('hellow')
+checkType(52)
