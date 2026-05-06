@@ -29,3 +29,21 @@ const checkType = (value: StringOrNumber) => {
 
 checkType('hellow')
 checkType(52)
+
+
+// Problem 4
+type User = {
+    id: number,
+    name: string,
+    age: number
+}
+
+const getProperty =<T, K extends keyof T> (obj: T, key:K) => {
+    const result = obj[key]
+    return result
+}
+
+const user = { id: 1, name: "John Doe", age: 21 };
+getProperty(user, "id");
+
+
