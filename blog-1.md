@@ -55,7 +55,7 @@ TypeScript-এর সবচেয়ে বড় সুবিধা হলো type sa
 ## Example
 
 ```ts
-let userData: any = 50;
+const userData: any = 50;
 
 console.log(userData.toUpperCase());
 ```
@@ -77,7 +77,7 @@ TypeScript error দেখাচ্ছে না, কিন্তু runtime এ
 ## Example of `unknown`
 
 ```ts
-let value: unknown = "TypeScript";
+const value: unknown = "TypeScript";
 
 console.log(value.toUpperCase());
 ```
@@ -97,7 +97,7 @@ console.log(value.toUpperCase());
 ## Correct Way
 
 ```ts
-let value: unknown = "TypeScript";
+const value: unknown = "TypeScript";
 
 if (typeof value === "string") {
   console.log(value.toUpperCase());
@@ -123,7 +123,7 @@ TypeScript যখন বুঝতে পারে variable আসলে কো�
 # Type Narrowing Example
 
 ```ts
-let data: unknown = "Hello World";
+const data: unknown = "Hello Naim";
 
 if (typeof data === "string") {
   console.log(data.length);
