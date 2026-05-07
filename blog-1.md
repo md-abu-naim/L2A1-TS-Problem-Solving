@@ -24,7 +24,7 @@ TypeScript মূলত JavaScript-এর একটি powerful superset যা 
 ## Example of `any`
 
 ```ts
-let value: any = "Hello TypeScript";
+let value: any = "Hello Naim";
 
 value = 100;
 value = true;
@@ -50,14 +50,14 @@ TypeScript-এর সবচেয়ে বড় সুবিধা হলো type sa
 
 এ কারণেই `any` কে “type safety hole” বলা হয়।
 
-কারণ এটি TypeScript-এর safety system এর মধ্যে একটি “hole” বা ফাঁক তৈরি করে যেখানে ভুল type ব্যবহৃত হলেও compiler কিছু বলে না।
+কারণ এটি TypeScript-এর safety system এর মধ্যে একটি “hole” তৈরি করে যেখানে ভুল type ব্যবহৃত হলেও compiler কিছু বলে না।
 
 ## Example
 
 ```ts
-const userData: any = 50;
+const user: any = 50;
 
-console.log(userData.toUpperCase());
+console.log(user.toUpperCase());
 ```
 
 এখানে `userData` আসলে number।
@@ -77,7 +77,7 @@ TypeScript error দেখাচ্ছে না, কিন্তু runtime এ
 ## Example of `unknown`
 
 ```ts
-const value: unknown = "TypeScript";
+const value: unknown = "Naim";
 
 console.log(value.toUpperCase());
 ```
@@ -88,16 +88,16 @@ console.log(value.toUpperCase());
 
 ---
 
-# `unknown` কেন safer?
+# `unknown` কেন safe?
 
-`unknown` safer কারণ এটি developer কে value ব্যবহার করার আগে type verify করতে বাধ্য করে।
+`unknown` safe কারণ এটি developer কে value ব্যবহার করার আগে type verify করতে বাধ্য করে।
 
 এতে accidental mistake এবং runtime error অনেক কমে যায়।
 
 ## Correct Way
 
 ```ts
-const value: unknown = "TypeScript";
+const value: unknown = "Mohammad Naim";
 
 if (typeof value === "string") {
   console.log(value.toUpperCase());
@@ -124,10 +124,10 @@ TypeScript যখন বুঝতে পারে variable আসলে কো�
 
 ```ts
 
-const data: unknown = "Hello Naim";
+const user: unknown = "Hello Naim";
 
-if (typeof data === "string") {
-  console.log(data.length);
+if (typeof user === "string") {
+  console.log(user.length);
 }
 ```
 
