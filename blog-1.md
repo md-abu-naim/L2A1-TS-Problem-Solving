@@ -123,7 +123,8 @@ TypeScript যখন বুঝতে পারে variable আসলে কো�
 # Type Narrowing Example
 
 ```ts
-const data: unknown = "Hello World";
+
+const data: unknown = "Hello Naim";
 
 if (typeof data === "string") {
   console.log(data.length);
@@ -164,12 +165,12 @@ getValue(10);
 
 # `any` vs `unknown`
 
-| Feature | any | unknown |
-|---|---|---|
-| Type Safety | ❌ নেই | ✅ আছে |
-| Any operation allowed | ✅ হ্যাঁ | ❌ না |
-| Runtime error risk | ⚠️ বেশি | ✅ কম |
-| Type checking required | ❌ না | ✅ হ্যাঁ |
+| Feature                | any  | unknown |
+| ---------------------- | ---- | ------- |
+| Type Safety            | ❌ নেই | ✅ আছে    |
+| Any operation allowed  | ✅ হ্যাঁ | ❌ না     |
+| Runtime error risk     | ⚠️ বেশি | ✅ কম    |
+| Type checking required | ❌ না  | ✅ হ্যাঁ    |
 
 ---
 
