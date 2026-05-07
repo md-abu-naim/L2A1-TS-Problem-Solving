@@ -88,9 +88,9 @@ console.log(value.toUpperCase());
 
 ---
 
-# `unknown` কেন safe?
+# `unknown` কেন safer?
 
-`unknown` safe কারণ এটি developer কে value ব্যবহার করার আগে type verify করতে বাধ্য করে।
+`unknown` safer কারণ এটি developer কে value ব্যবহার করার আগে type verify করতে বাধ্য করে।
 
 এতে accidental mistake এবং runtime error অনেক কমে যায়।
 
@@ -116,7 +116,7 @@ Type Narrowing হলো কোনো variable-এর actual type check কর�
 
 সহজভাবে বললে:
 
-TypeScript যখন বুঝতে পারে variable আসলে কোন type, তখন সেই type অনুযায়ী safe operation করতে দেয়।
+TypeScript যখন বুঝতে পারে variable আসলে কোন type, তখন সেই type অনুযায়ী safer operation করতে দেয়।
 
 ---
 
@@ -160,17 +160,6 @@ getValue(10);
 যদি number হয় তাহলে `toFixed()` ব্যবহার করছে।
 
 এটি runtime error কমাতে সাহায্য করে।
-
----
-
-# `any` vs `unknown`
-
-| Feature                | any  | unknown |
-| ---------------------- | ---- | ------- |
-| Type Safety            | ❌ নেই | ✅ আছে    |
-| Any operation allowed  | ✅ হ্যাঁ | ❌ না     |
-| Runtime error risk     | ⚠️ বেশি | ✅ কম    |
-| Type checking required | ❌ না  | ✅ হ্যাঁ    |
 
 ---
 
